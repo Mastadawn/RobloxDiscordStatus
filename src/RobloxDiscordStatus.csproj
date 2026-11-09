@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- WinExe means no console window, it lives in the tray instead -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>RobloxDiscordStatus</RootNamespace>
+    <AssemblyName>RobloxDiscordStatus</AssemblyName>
+    <Version>1.1.0</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+
+    <!-- When you publish, bundle everything into one .exe that people can just download and run -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Talks to the Discord desktop app for us: https://github.com/Lachee/discord-rpc-csharp -->
+    <PackageReference Include="DiscordRichPresence" Version="1.6.2.72" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+# Build output
+bin/
+obj/
+
+# Your own settings (each person has their own)
+config.json
+
+# Editor stuff
+.vs/
+.vscode/
+.idea/
+*.user
